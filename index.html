@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 10 GPA Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Class 10 GPA Calculator</h1>
+        <form id="gpaForm">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Marks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>English:</td>
+                        <td><input type="number" id="english" name="english" required min="0" max="100"></td>
+                    </tr>
+                    <tr>
+                        <td>Nepali:</td>
+                        <td><input type="number" id="nepali" name="nepali" required min="0" max="100"></td>
+                    </tr>
+                    <tr>
+                        <td>Social:</td>
+                        <td><input type="number" id="social" name="social" required min="0" max="100"></td>
+                    </tr>
+                    <tr>
+                        <td>Science:</td>
+                        <td><input type="number" id="science" name="science" required min="0" max="100"></td>
+                    </tr>
+                    <tr>
+                        <td>Compulsory Maths:</td>
+                        <td><input type="number" id="maths" name="maths" required min="0" max="100"></td>
+                    </tr>
+                    <tr>
+                        <td>Optional 1:</td>
+                        <td><input type="number" id="optional1" name="optional1" required min="0" max="100"></td>
+                    </tr>
+                    <tr>
+                        <td>Choose your Optional 2nd subject:</td>
+                        <td>
+                            <select id="optional2" name="optional2" style="width: 100%">
+                                <option value="computer">Computer</option>
+                                <option value="account">Accountancy</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="optional2Marks" id="optional2Label">Computer:</label></td>
+                        <td><input type="number" id="optional2Marks" name="optional2Marks" required min="0" max="100"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" onclick="calculateGPA()">Calculate GPA</button>
+        </form>
+      <div id="result">
+    <div class="line" >
+        <h2>Your GPA is:</h2>
+        <input type="text" id="gpa" readonly>
+    </div>
+    <div class="line">
+        <h2>You Scored:</h2>
+        <input type="text" id="grade" readonly>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
